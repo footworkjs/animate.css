@@ -3,6 +3,8 @@
 
 `animate.css` is a bunch of cool, fun, and cross-browser animations for you to use in your projects. Great for emphasis, home pages, sliders, and general just-add-water-awesomeness.
 
+**NOTE:** This is a custom version of [animate.css](https://github.com/daneden/animate.css) by Dan Eden. It has been modified to be [SASS](http://sass-lang.com/)-based and specifically built with the default classnames [FootworkJS](https://github.com/footworkjs/footwork) uses to animate its elements.
+
 ## Installation
 
 To install via Bower, simply do the following:
