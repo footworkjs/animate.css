@@ -1,0 +1,12 @@
+$animation: 'lightSpeedIn';
+
+.#{$animation} {
+  transform: translate3d(100%, 0, 0) skewX(-30deg);
+  opacity: 0;
+}
+
+.#{$animatedClass} > .#{$animation} {
+  transform: none;
+  opacity: 1;
+  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+}

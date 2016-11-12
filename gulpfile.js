@@ -13,6 +13,7 @@ var header = require('gulp-header');
 var postcss = require('gulp-postcss');
 var rename = require('gulp-rename');
 var runSequence = require('run-sequence');
+var sass = require("gulp-sass");
 
 // Misc/global vars
 var pkg = JSON.parse(fs.readFileSync('package.json'));
@@ -21,10 +22,10 @@ var activatedAnimations = activateAnimations();
 // Task options
 var opts = {
   destPath: './',
-  concatName: 'animate.css',
+  concatName: 'animate.scss',
 
   autoprefixer: {
-    browsers: ['last 2 versions'],
+    browsers: ['last 3 versions'],
     cascade: false
   },
 
@@ -55,6 +56,7 @@ gulp.task('default', function() {
 gulp.task('createCSS', function() {
   return gulp.src(activatedAnimations)
     .pipe(concat(opts.concatName))
+    .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
       autoprefixer(opts.autoprefixer)
     ]))
@@ -80,7 +82,7 @@ gulp.task('addHeader', function() {
 function activateAnimations() {
   var categories = JSON.parse(fs.readFileSync('animate-config.json')),
     category, files, file,
-    target = [ 'source/_base.css' ],
+    target = [ 'source/_base.scss' ],
     count = 0;
 
   for (category in categories) {
@@ -88,7 +90,7 @@ function activateAnimations() {
       files = categories[category];
 
       for (var i = 0; i < files.length; ++i) {
-        target.push('source/' + category + '/' + files[i] + '.css');
+        target.push('source/' + category + '/' + files[i] + '.scss');
         count += 1;
       }
     }

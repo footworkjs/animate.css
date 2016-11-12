@@ -1,0 +1,11 @@
+$animation: 'slideInDown';
+
+.#{$animation} {
+  transform: translate3d(0, -$normalDistance, 0);
+  visibility: visible;
+}
+
+.#{$animatedClass} > .#{$animation} {
+  transform: translate3d(0, 0, 0);
+  transition: transform $animationSpeed ease;
+}

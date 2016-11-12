@@ -1,0 +1,14 @@
+$animation: 'rotateIn';
+
+.#{$animation} {
+  transform-origin: center;
+  transform: rotate3d(0, 0, 1, -200deg);
+  opacity: 0;
+}
+
+.#{$animatedClass} > .#{$animation} {
+  transform-origin: center;
+  transform: none;
+  opacity: 1;
+  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+}

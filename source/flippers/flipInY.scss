@@ -1,0 +1,13 @@
+$animation: 'flipInY';
+
+.#{$animation} {
+  backface-visibility: visible !important;
+  transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+  opacity: 0;
+}
+
+.#{$animatedClass} > .#{$animation} {
+  transform: perspective(400px);
+  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+  opacity: 1;
+}

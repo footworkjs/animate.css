@@ -1,0 +1,10 @@
+$animation: 'fadeIn';
+
+.#{$animation} {
+  opacity: 0;
+}
+
+.#{$animatedClass} > .#{$animation} {
+  opacity: 1;
+  transition: opacity $animationSpeed ease;
+}

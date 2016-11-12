@@ -1,0 +1,12 @@
+$animation: 'fadeInDownBig';
+
+.#{$animation} {
+  opacity: 0;
+  transform: translate3d(0, -$bigDistance, 0);
+}
+
+.#{$animatedClass} > .#{$animation} {
+  opacity: 1;
+  transform: none;
+  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+}
