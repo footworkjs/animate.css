@@ -72,7 +72,11 @@ Full example:
 ```
 
 ```javascript
+// adding the animatedIn class will trigger the animatedIn animation
 $('.contents').addClass('animatedIn');
+
+// removing the animatedIn class will cause the element to reset to original starting, invisible state
+$('.contents').removeClass('animatedIn');
 ```
 
 ## Custom Builds
