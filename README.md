@@ -72,7 +72,11 @@ Full example:
 ```
 
 ```javascript
-// adding the animatedIn class will trigger the animatedIn animation
+//
+/**
+ * All of the direct children of the parent will then have their
+ * animations triggered when the animatedIn class is added to the parent.
+ */
 $('.contents').addClass('animatedIn');
 
 // removing the animatedIn class will cause the element to reset to original starting, invisible state
