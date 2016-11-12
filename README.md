@@ -64,7 +64,7 @@ $ npm install footwork-animate --save
 Full example:
 ```html
 <div class="contents">
-  <h1 class="fadeInUp">Example</h1>
+  <h1 class="fadeInUp">Example</h1> <!-- this element is invisible until its parent has the animatedIn class added -->
 </div>
 ```
 
