@@ -10,28 +10,24 @@ Custom version of [animate.css](https://github.com/daneden/animate.css) for usag
 To install via Bower, simply do the following:
 
 ```bash
-$ bower install animate.css --save
+$ bower install footwork-animate --save
 ```
 or you can install via npm:
 
 ```bash
-$ npm install animate.css --save
+$ npm install footwork-animate --save
 ```
 
-##Basic Usage
+## Basic Usage
+
 1. Include the stylesheet on your document's `<head>`
 
   ```html
   <head>
-    <link rel="stylesheet" href="animate.min.css">
+    <link rel="stylesheet" href="/bower_components/footwork-animate/animate.min.css">
   </head>
   ```
-  or use the version hosted by [CDNJS](https://cdnjs.com/libraries/animate.css)
-  ```html
-  <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-  </head>
-  ```
+
 2. Add the class `animatedIn` to the parent element of the element you want to animate into view.
 
 3. Finally you need to add one of the following classes to the elements (direct children of the parent) you want to animate:

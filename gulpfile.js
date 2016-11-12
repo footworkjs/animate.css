@@ -56,6 +56,7 @@ gulp.task('default', function() {
 gulp.task('createCSS', function() {
   return gulp.src(activatedAnimations)
     .pipe(concat(opts.concatName))
+    .pipe(gulp.dest(opts.destPath))
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
       autoprefixer(opts.autoprefixer)

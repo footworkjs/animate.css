@@ -1,5 +1,5 @@
 {
-  "name": "animate.css",
+  "name": "footwork-animate",
   "main": "./animate.css",
   "ignore": [
     ".*",

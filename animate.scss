@@ -1,0 +1,414 @@
+$animatedClass: 'animatedIn';
+$animationSpeed: 0.6s;
+$normalDistance: 100px;
+$bigDistance: 200px;
+
+.animated {
+  animation-duration: $animationSpeed;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  animation-duration: ($animationSpeed * 2);
+}
+
+.animated.flipOutX,
+.animated.flipOutY,
+.animated.bounceIn,
+.animated.bounceOut {
+  animation-duration: $animationSpeed;
+}
+
+$animation: 'fadeIn';
+
+.#{$animation} {
+  opacity: 0;
+}
+
+.#{$animatedClass} > .#{$animation} {
+  opacity: 1;
+  transition: opacity $animationSpeed ease;
+}
+
+$animation: 'fadeInDown';
+
+.#{$animation} {
+  opacity: 0;
+  transform: translate3d(0, $normalDistance, 0);
+}
+
+.#{$animatedClass} > .#{$animation} {
+  opacity: 1;
+  transform: none;
+  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+}
+
+$animation: 'fadeInDownBig';
+
+.#{$animation} {
+  opacity: 0;
+  transform: translate3d(0, -$bigDistance, 0);
+}
+
+.#{$animatedClass} > .#{$animation} {
+  opacity: 1;
+  transform: none;
+  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+}
+
+$animation: 'fadeInLeft';
+
+.#{$animation} {
+  opacity: 0;
+  transform: translate3d(-100%, 0, 0);
+}
+
+.#{$animatedClass} > .#{$animation} {
+  opacity: 1;
+  transform: none;
+  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+}
+
+$animation: 'fadeInLeftBig';
+
+.#{$animation} {
+  opacity: 0;
+  transform: translate3d(-$bigDistance, 0, 0);
+}
+
+.#{$animatedClass} > .#{$animation} {
+  opacity: 1;
+  transform: none;
+  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+}
+
+$animation: 'fadeInRight';
+
+.#{$animation} {
+  opacity: 0;
+  transform: translate3d(100%, 0, 0);
+}
+
+.#{$animatedClass} > .#{$animation} {
+  opacity: 1;
+  transform: none;
+  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+}
+
+$animation: 'fadeInRightBig';
+
+.#{$animation} {
+  opacity: 0;
+  transform: translate3d($bigDistance, 0, 0);
+}
+
+.#{$animatedClass} > .#{$animation} {
+  opacity: 1;
+  transform: none;
+  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+}
+
+$animation: 'fadeInUp';
+
+.#{$animation} {
+  opacity: 0;
+  transform: translate3d(0, $normalDistance, 0);
+}
+
+.#{$animatedClass} > .#{$animation} {
+  opacity: 1;
+  transform: none;
+  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+}
+
+$animation: 'fadeInUpBig';
+
+.#{$animation} {
+  opacity: 0;
+  transform: translate3d(0, $bigDistance, 0);
+}
+
+.#{$animatedClass} > .#{$animation} {
+  opacity: 1;
+  transform: none;
+  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+}
+
+@keyframes flip {
+  from {
+    transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    animation-timing-function: ease-out;
+  }
+
+  40% {
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    animation-timing-function: ease-out;
+  }
+
+  50% {
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    animation-timing-function: ease-in;
+  }
+
+  80% {
+    transform: perspective(400px) scale3d(.95, .95, .95);
+    animation-timing-function: ease-in;
+  }
+
+  to {
+    transform: perspective(400px);
+    animation-timing-function: ease-in;
+  }
+}
+
+.animated.flip {
+  backface-visibility: visible;
+  animation-name: flip;
+}
+
+$animation: 'flipInX';
+
+.#{$animation} {
+  backface-visibility: visible !important;
+  transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+  opacity: 0;
+}
+
+.#{$animatedClass} > .#{$animation} {
+  transform: perspective(400px);
+  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+  opacity: 1;
+}
+
+$animation: 'flipInY';
+
+.#{$animation} {
+  backface-visibility: visible !important;
+  transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+  opacity: 0;
+}
+
+.#{$animatedClass} > .#{$animation} {
+  transform: perspective(400px);
+  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+  opacity: 1;
+}
+
+$animation: 'lightSpeedIn';
+
+.#{$animation} {
+  transform: translate3d(100%, 0, 0) skewX(-30deg);
+  opacity: 0;
+}
+
+.#{$animatedClass} > .#{$animation} {
+  transform: none;
+  opacity: 1;
+  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+}
+
+$animation: 'rotateIn';
+
+.#{$animation} {
+  transform-origin: center;
+  transform: rotate3d(0, 0, 1, -200deg);
+  opacity: 0;
+}
+
+.#{$animatedClass} > .#{$animation} {
+  transform-origin: center;
+  transform: none;
+  opacity: 1;
+  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+}
+
+$animation: 'rotateInDownLeft';
+
+.#{$animation} {
+  transform-origin: left bottom;
+  transform: rotate3d(0, 0, 1, -45deg);
+  opacity: 0;
+}
+
+.#{$animatedClass} > .#{$animation} {
+  transform-origin: left bottom;
+  transform: none;
+  opacity: 1;
+  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+}
+
+$animation: 'rotateInDownRight';
+
+.#{$animation} {
+  transform-origin: right bottom;
+  transform: rotate3d(0, 0, 1, 45deg);
+  opacity: 0;
+}
+
+.#{$animatedClass} > .#{$animation} {
+  transform-origin: right bottom;
+  transform: none;
+  opacity: 1;
+  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+}
+
+$animation: 'rotateInUpLeft';
+
+.#{$animation} {
+  transform-origin: left bottom;
+  transform: rotate3d(0, 0, 1, 45deg);
+  opacity: 0;
+}
+
+.#{$animatedClass} > .#{$animation} {
+  transform-origin: left bottom;
+  transform: none;
+  opacity: 1;
+  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+}
+
+$animation: 'rotateInUpRight';
+
+.#{$animation} {
+  transform-origin: right bottom;
+  transform: rotate3d(0, 0, 1, -90deg);
+  opacity: 0;
+}
+
+.#{$animatedClass} > .#{$animation} {
+  transform-origin: right bottom;
+  transform: none;
+  opacity: 1;
+  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+$animation: 'rollIn';
+
+.#{$animation} {
+  opacity: 0;
+  transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+}
+
+.#{$animatedClass} > .#{$animation} {
+  opacity: 1;
+  transform: none;
+  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+}
+
+$animation: 'zoomIn';
+
+.#{$animation} {
+  opacity: 0;
+  transform: scale3d(.3, .3, .3);
+}
+
+.#{$animatedClass} > .#{$animation} {
+  opacity: 1;
+  transform: none;
+  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+}
+
+$animation: 'zoomInDown';
+
+.#{$animation} {
+  opacity: 0;
+  transform: scale3d(.1, .1, .1) translate3d(0, -400px, 0);
+}
+
+.#{$animatedClass} > .#{$animation} {
+  opacity: 1;
+  transform: none;
+  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+}
+
+$animation: 'zoomInLeft';
+
+.#{$animation} {
+  opacity: 0;
+  transform: scale3d(.1, .1, .1) translate3d(-400px, 0, 0);
+}
+
+.#{$animatedClass} > .#{$animation} {
+  opacity: 1;
+  transform: none;
+  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+}
+
+$animation: 'zoomInRight';
+
+.#{$animation} {
+  opacity: 0;
+  transform: scale3d(.1, .1, .1) translate3d(400px, 0, 0);
+}
+
+.#{$animatedClass} > .#{$animation} {
+  opacity: 1;
+  transform: none;
+  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+}
+
+$animation: 'zoomInUp';
+
+.#{$animation} {
+  opacity: 0;
+  transform: scale3d(.1, .1, .1) translate3d(0, 400px, 0);
+}
+
+.#{$animatedClass} > .#{$animation} {
+  opacity: 1;
+  transform: none;
+  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+}
+
+$animation: 'slideInDown';
+
+.#{$animation} {
+  transform: translate3d(0, -$normalDistance, 0);
+  visibility: visible;
+}
+
+.#{$animatedClass} > .#{$animation} {
+  transform: translate3d(0, 0, 0);
+  transition: transform $animationSpeed ease;
+}
+
+$animation: 'slideInLeft';
+
+.#{$animation} {
+  transform: translate3d(-$normalDistance, 0, 0);
+  visibility: visible;
+}
+
+.#{$animatedClass} > .#{$animation} {
+  transform: translate3d(0, 0, 0);
+  transition: transform $animationSpeed ease;
+}
+
+$animation: 'slideInRight';
+
+.#{$animation} {
+  transform: translate3d($normalDistance, 0, 0);
+  visibility: visible;
+}
+
+.#{$animatedClass} > .#{$animation} {
+  transform: translate3d(0, 0, 0);
+  transition: transform $animationSpeed ease;
+}
+
+$animation: 'slideInUp';
+
+.#{$animation} {
+  transform: translate3d(0, $normalDistance, 0);
+  visibility: visible;
+}
+
+.#{$animatedClass} > .#{$animation} {
+  transform: translate3d(0, 0, 0);
+  transition: transform $animationSpeed ease;
+}

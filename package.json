@@ -1,15 +1,25 @@
 {
-  "name": "animate.css",
-  "version": "3.5.2",
+  "name": "footwork-animate",
+  "version": "2.0.0",
   "main": "animate.css",
   "repository": {
     "type": "git",
-    "url": "https://github.com/daneden/animate.css.git"
+    "url": "https://github.com/footworkjs/footwork-animate.git"
   },
   "author": {
     "name": "Daniel Eden"
   },
-  "homepage": "http://daneden.me/animate",
+  "contributors": [
+    {
+      "name": "Daniel Eden"
+    },
+    {
+      "name": "Jonathan Newman",
+      "email": "jonathan@staticty.pe",
+      "url": "https://github.com/jonbnewman"
+    }
+  ],
+  "homepage": "http://footworkjs.com",
   "license": "MIT",
   "style": "./animate.css",
   "jspm": {
