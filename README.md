@@ -1,5 +1,6 @@
-#Animate.css [![GitHub release](https://img.shields.io/github/release/daneden/animate.css.svg)](https://github.com/daneden/animate.css/releases) [![Build Status](https://travis-ci.org/WarenGonzaga/animate.css.svg?branch=master)](https://travis-ci.org/WarenGonzaga/animate.css) [![devDependencies Status](https://david-dm.org/WarenGonzaga/animate.css/dev-status.svg)](https://david-dm.org/WarenGonzaga/animate.css?type=dev) [![chat](https://img.shields.io/badge/chat-gitter-green.svg)](https://gitter.im/animate-css/Lobby)
-*Just-add-water CSS animation*
+# footwork-animate
+
+*Just-add-water CSS animation (for FootworkJS)*
 
 Custom version of [animate.css](https://github.com/daneden/animate.css) for usage with [FootworkJS](https://github.com/footworkjs/footwork) when animating its elements.
 
