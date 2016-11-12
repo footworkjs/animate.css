@@ -1,7 +1,7 @@
-$animatedClass: 'animatedIn';
-$animationSpeed: 0.6s;
-$normalDistance: 100px;
-$bigDistance: 200px;
+$animatedClass: 'animatedIn' !default;
+$animationSpeed: 0.6s !default;
+$normalDistance: 100px !default;
+$bigDistance: 200px !default;
 
 .animated {
   animation-duration: $animationSpeed;
