@@ -2,7 +2,7 @@
 
 *Just-add-water CSS animation (for FootworkJS)*
 
-Custom version of [animate.css](https://github.com/daneden/animate.css) for usage with [FootworkJS](https://github.com/footworkjs/footwork) when animating its elements.
+Custom/forked version of [animate.css](https://github.com/daneden/animate.css) for usage with [FootworkJS](https://github.com/footworkjs/footwork) when animating its elements.
 
 **NOTE:** This version of [animate.css](https://github.com/daneden/animate.css) has been modified to be [SASS](http://sass-lang.com/)-based and to use a flag on the parent element to trigger the changed state/animation on its direct children.
 
@@ -83,10 +83,10 @@ $('.contents').removeClass('animatedIn');
 ```
 
 ## Custom Builds
-Animate.css is powered by [gulp.js](http://gulpjs.com/), and you can create custom builds pretty easily. First of all, you’ll need Gulp and all other dependencies:
+footwork-animate is powered by [gulp.js](http://gulpjs.com/), and you can create custom builds pretty easily. First of all, you’ll need Gulp and all other dependencies:
 
 ```sh
-$ cd path/to/animate.css/
+$ cd path/to/footwork-animate/
 $ sudo npm install
 ```
 
@@ -106,4 +106,4 @@ Next, run `gulp` to compile your custom builds. For example, if you want only so
 ```
 
 ## License
-Animate.css is licensed under the MIT license. (http://opensource.org/licenses/MIT)
+footwork-animate is licensed under the MIT license. (http://opensource.org/licenses/MIT)
