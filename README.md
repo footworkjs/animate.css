@@ -72,7 +72,6 @@ Full example:
 ```
 
 ```javascript
-//
 /**
  * All of the direct children of the parent will then have their
  * animations triggered when the animatedIn class is added to the parent.
