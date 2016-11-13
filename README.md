@@ -137,7 +137,7 @@ If you are making your own custom build using the SCSS, you have these available
 $animateInClass: 'animateIn';
 
 // The duration of the animations
-$animationDuration: 0.6s;
+$animationInDuration: 0.6s;
 
 // For animations that 'slide' elements, this is the 'normal' distance
 $normalDistance: 100px;

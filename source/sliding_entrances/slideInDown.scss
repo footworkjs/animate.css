@@ -7,5 +7,5 @@ $animation: 'slideInDown';
 
 .#{$animateInClass} > .#{$animation} {
   transform: translate3d(0, 0, 0);
-  transition: transform $animationDuration ease;
+  transition: transform $animationInDuration ease;
 }

@@ -10,5 +10,5 @@ $animation: 'rotateInDownLeft';
   transform-origin: left bottom;
   transform: none;
   opacity: 1;
-  transition: opacity $animationDuration ease, transform $animationDuration ease;
+  transition: opacity $animationInDuration ease, transform $animationInDuration ease;
 }

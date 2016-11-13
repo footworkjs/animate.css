@@ -8,5 +8,5 @@ $animation: 'fadeInRightBig';
 .#{$animateInClass} > .#{$animation} {
   opacity: 1;
   transform: none;
-  transition: opacity $animationDuration ease, transform $animationDuration ease;
+  transition: opacity $animationInDuration ease, transform $animationInDuration ease;
 }
