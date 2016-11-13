@@ -1,5 +1,6 @@
 {
   "name": "footwork-animate",
+  "description": "Just-add-water CSS animation (for FootworkJS)",
   "version": "3.5.2",
   "main": "animate.css",
   "repository": {
