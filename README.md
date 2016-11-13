@@ -1,6 +1,6 @@
 # footwork-animate
 
-[![npm version](https://badge.fury.io/js/footwork-animate.svg)](https://badge.fury.io/js/footwork-animate) [![Bower version](https://badge.fury.io/bo/footwork-animate.png)](https://badge.fury.io/bo/footwork-animate)
+[![npm version](https://badge.fury.io/js/footwork-animate.png)](https://badge.fury.io/js/footwork-animate) [![Bower version](https://badge.fury.io/bo/footwork-animate.png)](https://badge.fury.io/bo/footwork-animate)
 
 *Just-add-water CSS animation (for FootworkJS)*
 
@@ -85,26 +85,57 @@ $('.contents').removeClass('animatedIn');
 ```
 
 ## Custom Builds
-footwork-animate is powered by [gulp.js](http://gulpjs.com/), and you can create custom builds pretty easily. First of all, you’ll need Gulp and all other dependencies:
 
-```sh
-$ cd path/to/footwork-animate/
-$ sudo npm install
-```
+footwork-animate is offered in both SCSS and plain (compiled) CSS form. You can either include the supplied SCSS and customize your build that way or you can clone the repo, modify the source, and rebuild as described below:
 
-Next, run `gulp` to compile your custom builds. For example, if you want only some of the “fading entrances”, simply edit the `animate-config.json` file to select only the animations you want to use.
+1. Clone the repo from GitHub:
 
-```javascript
-"fading_entrances": {
-  "fadeIn": true,
-  "fadeInDown": false,
-  "fadeInLeft": true,
-  "fadeInLeftBig": true,
-  "fadeInRight": false,
-  "fadeInRightBig": true,
-  "fadeInUp": false,
-  "fadeInUpBig": true
-}
+        git clone https://github.com/footworkjs/footwork-animate.git
+        cd footwork-animate
+
+1. Install Node.js and NPM (if needed):
+
+  This is platform specific. Your OS may already include it, however if not please see: [Installing Node](https://docs.npmjs.com/getting-started/installing-node).
+
+1. Install [gulp](http://gulpjs.com/) globally (if needed):
+
+        sudo npm install -g gulp-cli
+
+1. Next, run `gulp` to compile your custom builds.
+
+        sudo npm install -g gulp-cli
+
+    If you want only some of the “fading entrances”, simply edit the `animate-config.json` file to select only the animations you want to use.
+
+        "fading_entrances": {
+          "fadeIn": true,
+          "fadeInDown": false,
+          "fadeInLeft": true,
+          "fadeInLeftBig": true,
+          "fadeInRight": false,
+          "fadeInRightBig": true,
+          "fadeInUp": false,
+          "fadeInUpBig": true
+        }
+
+## Available SASS Variables/Defaults
+
+If you are making your own custom build using the SCSS, you have these available variables you can override:
+
+```SASS
+// The class added to the parent which triggers the animation on its children
+$animatedClass: 'animatedIn';
+
+// The speed of the animations
+$animationSpeed: 0.6s;
+
+// For animations that 'slide' elements, this is the 'normal' distance
+$normalDistance: 100px;
+
+// For animations that 'slide' elements, this is the 'big' distance
+$bigDistance: 200px;
+
+@import "/path/to/footwork-animate/animate.scss";
 ```
 
 ## License
