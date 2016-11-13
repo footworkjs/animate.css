@@ -1,6 +1,6 @@
 # footwork-animate
 
-[![npm version](https://badge.fury.io/js/footwork-animate.svg)](https://badge.fury.io/js/footwork-animate)
+[![npm version](https://badge.fury.io/js/footwork-animate.svg)](https://badge.fury.io/js/footwork-animate) [![Bower version](https://badge.fury.io/bo/footwork-animate.png)](https://badge.fury.io/bo/footwork-animate)
 
 *Just-add-water CSS animation (for FootworkJS)*
 
