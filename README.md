@@ -63,26 +63,27 @@ $ npm install footwork-animate --save
 
 1. Finally, add the class `animatedIn` to the parent element of the elements you want to animate into view.
 
-Full example:
-```html
-<div class="contents">
-  <!-- Any element with one of the above animations is invisible until
-       its parent has the animatedIn class added. -->
-  <h1 class="fadeInUp">Example fadeInUp</h1>
-  <h1 class="flipInX">Example flipInX</h1>
-</div>
-```
+  Full example:
 
-```javascript
-/**
- * All of the direct children of the parent will then have their
- * animations triggered when the animatedIn class is added to the parent.
- */
-$('.contents').addClass('animatedIn');
+  ```html
+  <div class="contents">
+    <!-- Any element with one of the above animations is invisible until
+        its parent has the animatedIn class added. -->
+    <h1 class="fadeInUp">Example fadeInUp</h1>
+    <h1 class="flipInX">Example flipInX</h1>
+  </div>
+  ```
 
-// removing the animatedIn class will cause the element to reset to original starting, invisible state
-$('.contents').removeClass('animatedIn');
-```
+  ```javascript
+  /**
+  * All of the direct children of the parent will then have their
+  * animations triggered when the animatedIn class is added to the parent.
+  */
+  $('.contents').addClass('animatedIn');
+
+  // removing the animatedIn class will cause the element to reset to original starting, invisible state
+  $('.contents').removeClass('animatedIn');
+  ```
 
 ## Custom Builds
 
@@ -90,8 +91,10 @@ footwork-animate is offered in both SCSS and plain (compiled) CSS form. You can 
 
 1. Clone the repo from GitHub:
 
-        git clone https://github.com/footworkjs/footwork-animate.git
-        cd footwork-animate
+  ```sh
+  git clone https://github.com/footworkjs/footwork-animate.git
+  cd footwork-animate
+  ```
 
 1. Install Node.js and NPM (if needed):
 
@@ -99,24 +102,30 @@ footwork-animate is offered in both SCSS and plain (compiled) CSS form. You can 
 
 1. Install [gulp](http://gulpjs.com/) globally (if needed):
 
-        sudo npm install -g gulp-cli
+  ```sh
+  sudo npm install -g gulp-cli
+  ```
 
-1. Next, run `gulp` to compile your custom builds.
+1. Next, run `gulp` from the footwork-animate folder to compile your custom builds.
 
-        sudo npm install -g gulp-cli
+  ```sh
+  gulp
+  ```
 
-    If you want only some of the “fading entrances”, simply edit the `animate-config.json` file to select only the animations you want to use.
+  If you want only some of the “fading entrances”, simply edit the `animate-config.json` file to select only the animations you want to use.
 
-        "fading_entrances": {
-          "fadeIn": true,
-          "fadeInDown": false,
-          "fadeInLeft": true,
-          "fadeInLeftBig": true,
-          "fadeInRight": false,
-          "fadeInRightBig": true,
-          "fadeInUp": false,
-          "fadeInUpBig": true
-        }
+  ```javascript
+  "fading_entrances": {
+    "fadeIn": true,
+    "fadeInDown": false,
+    "fadeInLeft": true,
+    "fadeInLeftBig": true,
+    "fadeInRight": false,
+    "fadeInRightBig": true,
+    "fadeInUp": false,
+    "fadeInUpBig": true
+  }
+  ```
 
 ## Available SASS Variables/Defaults
 
