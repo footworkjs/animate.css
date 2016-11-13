@@ -31,9 +31,7 @@ $ npm install footwork-animate --save
   </head>
   ```
 
-2. Add the class `animatedIn` to the parent element of the element you want to animate into view.
-
-3. Finally you need to add one of the following classes to the elements (direct children of the parent) you want to animate:
+1. You need to add one of the following classes to the elements (direct children of the parent) you want to animate:
 
   * `fadeIn`
   * `fadeInDown`
@@ -62,6 +60,8 @@ $ npm install footwork-animate --save
   * `slideInLeft`
   * `slideInRight`
   * `slideInUp`
+
+1. Finally, add the class `animatedIn` to the parent element of the elements you want to animate into view.
 
 Full example:
 ```html
