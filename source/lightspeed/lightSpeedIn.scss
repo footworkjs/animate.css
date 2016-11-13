@@ -5,8 +5,8 @@ $animation: 'lightSpeedIn';
   opacity: 0;
 }
 
-.#{$animatedClass} > .#{$animation} {
+.#{$animateInClass} > .#{$animation} {
   transform: none;
   opacity: 1;
-  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+  transition: opacity $animationDuration ease, transform $animationDuration ease;
 }

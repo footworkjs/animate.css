@@ -6,8 +6,8 @@ $animation: 'flipInX';
   opacity: 0;
 }
 
-.#{$animatedClass} > .#{$animation} {
+.#{$animateInClass} > .#{$animation} {
   transform: perspective(400px);
-  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+  transition: opacity $animationDuration ease, transform $animationDuration ease;
   opacity: 1;
 }

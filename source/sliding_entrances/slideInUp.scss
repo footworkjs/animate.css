@@ -5,7 +5,7 @@ $animation: 'slideInUp';
   visibility: visible;
 }
 
-.#{$animatedClass} > .#{$animation} {
+.#{$animateInClass} > .#{$animation} {
   transform: translate3d(0, 0, 0);
-  transition: transform $animationSpeed ease;
+  transition: transform $animationDuration ease;
 }

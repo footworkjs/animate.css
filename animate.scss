@@ -1,27 +1,7 @@
-$animatedClass: 'animatedIn' !default;
-$animationSpeed: 0.6s !default;
+$animateInClass: 'animatedIn' !default;
+$animationDuration: 0.6s !default;
 $normalDistance: 100px !default;
 $bigDistance: 200px !default;
-
-.animated {
-  animation-duration: $animationSpeed;
-  animation-fill-mode: both;
-}
-
-.animated.infinite {
-  animation-iteration-count: infinite;
-}
-
-.animated.hinge {
-  animation-duration: ($animationSpeed * 2);
-}
-
-.animated.flipOutX,
-.animated.flipOutY,
-.animated.bounceIn,
-.animated.bounceOut {
-  animation-duration: $animationSpeed;
-}
 
 $animation: 'fadeIn';
 
@@ -29,9 +9,9 @@ $animation: 'fadeIn';
   opacity: 0;
 }
 
-.#{$animatedClass} > .#{$animation} {
+.#{$animateInClass} > .#{$animation} {
   opacity: 1;
-  transition: opacity $animationSpeed ease;
+  transition: opacity $animationDuration ease;
 }
 
 $animation: 'fadeInDown';
@@ -41,10 +21,10 @@ $animation: 'fadeInDown';
   transform: translate3d(0, $normalDistance, 0);
 }
 
-.#{$animatedClass} > .#{$animation} {
+.#{$animateInClass} > .#{$animation} {
   opacity: 1;
   transform: none;
-  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+  transition: opacity $animationDuration ease, transform $animationDuration ease;
 }
 
 $animation: 'fadeInDownBig';
@@ -54,10 +34,10 @@ $animation: 'fadeInDownBig';
   transform: translate3d(0, -$bigDistance, 0);
 }
 
-.#{$animatedClass} > .#{$animation} {
+.#{$animateInClass} > .#{$animation} {
   opacity: 1;
   transform: none;
-  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+  transition: opacity $animationDuration ease, transform $animationDuration ease;
 }
 
 $animation: 'fadeInLeft';
@@ -67,10 +47,10 @@ $animation: 'fadeInLeft';
   transform: translate3d(-100%, 0, 0);
 }
 
-.#{$animatedClass} > .#{$animation} {
+.#{$animateInClass} > .#{$animation} {
   opacity: 1;
   transform: none;
-  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+  transition: opacity $animationDuration ease, transform $animationDuration ease;
 }
 
 $animation: 'fadeInLeftBig';
@@ -80,10 +60,10 @@ $animation: 'fadeInLeftBig';
   transform: translate3d(-$bigDistance, 0, 0);
 }
 
-.#{$animatedClass} > .#{$animation} {
+.#{$animateInClass} > .#{$animation} {
   opacity: 1;
   transform: none;
-  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+  transition: opacity $animationDuration ease, transform $animationDuration ease;
 }
 
 $animation: 'fadeInRight';
@@ -93,10 +73,10 @@ $animation: 'fadeInRight';
   transform: translate3d(100%, 0, 0);
 }
 
-.#{$animatedClass} > .#{$animation} {
+.#{$animateInClass} > .#{$animation} {
   opacity: 1;
   transform: none;
-  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+  transition: opacity $animationDuration ease, transform $animationDuration ease;
 }
 
 $animation: 'fadeInRightBig';
@@ -106,10 +86,10 @@ $animation: 'fadeInRightBig';
   transform: translate3d($bigDistance, 0, 0);
 }
 
-.#{$animatedClass} > .#{$animation} {
+.#{$animateInClass} > .#{$animation} {
   opacity: 1;
   transform: none;
-  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+  transition: opacity $animationDuration ease, transform $animationDuration ease;
 }
 
 $animation: 'fadeInUp';
@@ -119,10 +99,10 @@ $animation: 'fadeInUp';
   transform: translate3d(0, $normalDistance, 0);
 }
 
-.#{$animatedClass} > .#{$animation} {
+.#{$animateInClass} > .#{$animation} {
   opacity: 1;
   transform: none;
-  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+  transition: opacity $animationDuration ease, transform $animationDuration ease;
 }
 
 $animation: 'fadeInUpBig';
@@ -132,10 +112,10 @@ $animation: 'fadeInUpBig';
   transform: translate3d(0, $bigDistance, 0);
 }
 
-.#{$animatedClass} > .#{$animation} {
+.#{$animateInClass} > .#{$animation} {
   opacity: 1;
   transform: none;
-  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+  transition: opacity $animationDuration ease, transform $animationDuration ease;
 }
 
 @keyframes flip {
@@ -178,9 +158,9 @@ $animation: 'flipInX';
   opacity: 0;
 }
 
-.#{$animatedClass} > .#{$animation} {
+.#{$animateInClass} > .#{$animation} {
   transform: perspective(400px);
-  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+  transition: opacity $animationDuration ease, transform $animationDuration ease;
   opacity: 1;
 }
 
@@ -192,9 +172,9 @@ $animation: 'flipInY';
   opacity: 0;
 }
 
-.#{$animatedClass} > .#{$animation} {
+.#{$animateInClass} > .#{$animation} {
   transform: perspective(400px);
-  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+  transition: opacity $animationDuration ease, transform $animationDuration ease;
   opacity: 1;
 }
 
@@ -205,10 +185,10 @@ $animation: 'lightSpeedIn';
   opacity: 0;
 }
 
-.#{$animatedClass} > .#{$animation} {
+.#{$animateInClass} > .#{$animation} {
   transform: none;
   opacity: 1;
-  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+  transition: opacity $animationDuration ease, transform $animationDuration ease;
 }
 
 $animation: 'rotateIn';
@@ -219,11 +199,11 @@ $animation: 'rotateIn';
   opacity: 0;
 }
 
-.#{$animatedClass} > .#{$animation} {
+.#{$animateInClass} > .#{$animation} {
   transform-origin: center;
   transform: none;
   opacity: 1;
-  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+  transition: opacity $animationDuration ease, transform $animationDuration ease;
 }
 
 $animation: 'rotateInDownLeft';
@@ -234,11 +214,11 @@ $animation: 'rotateInDownLeft';
   opacity: 0;
 }
 
-.#{$animatedClass} > .#{$animation} {
+.#{$animateInClass} > .#{$animation} {
   transform-origin: left bottom;
   transform: none;
   opacity: 1;
-  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+  transition: opacity $animationDuration ease, transform $animationDuration ease;
 }
 
 $animation: 'rotateInDownRight';
@@ -249,11 +229,11 @@ $animation: 'rotateInDownRight';
   opacity: 0;
 }
 
-.#{$animatedClass} > .#{$animation} {
+.#{$animateInClass} > .#{$animation} {
   transform-origin: right bottom;
   transform: none;
   opacity: 1;
-  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+  transition: opacity $animationDuration ease, transform $animationDuration ease;
 }
 
 $animation: 'rotateInUpLeft';
@@ -264,11 +244,11 @@ $animation: 'rotateInUpLeft';
   opacity: 0;
 }
 
-.#{$animatedClass} > .#{$animation} {
+.#{$animateInClass} > .#{$animation} {
   transform-origin: left bottom;
   transform: none;
   opacity: 1;
-  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+  transition: opacity $animationDuration ease, transform $animationDuration ease;
 }
 
 $animation: 'rotateInUpRight';
@@ -279,11 +259,11 @@ $animation: 'rotateInUpRight';
   opacity: 0;
 }
 
-.#{$animatedClass} > .#{$animation} {
+.#{$animateInClass} > .#{$animation} {
   transform-origin: right bottom;
   transform: none;
   opacity: 1;
-  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+  transition: opacity $animationDuration ease, transform $animationDuration ease;
 }
 
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
@@ -294,10 +274,10 @@ $animation: 'rollIn';
   transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
 }
 
-.#{$animatedClass} > .#{$animation} {
+.#{$animateInClass} > .#{$animation} {
   opacity: 1;
   transform: none;
-  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+  transition: opacity $animationDuration ease, transform $animationDuration ease;
 }
 
 $animation: 'zoomIn';
@@ -307,10 +287,10 @@ $animation: 'zoomIn';
   transform: scale3d(.3, .3, .3);
 }
 
-.#{$animatedClass} > .#{$animation} {
+.#{$animateInClass} > .#{$animation} {
   opacity: 1;
   transform: none;
-  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+  transition: opacity $animationDuration ease, transform $animationDuration ease;
 }
 
 $animation: 'zoomInDown';
@@ -320,10 +300,10 @@ $animation: 'zoomInDown';
   transform: scale3d(.1, .1, .1) translate3d(0, -400px, 0);
 }
 
-.#{$animatedClass} > .#{$animation} {
+.#{$animateInClass} > .#{$animation} {
   opacity: 1;
   transform: none;
-  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+  transition: opacity $animationDuration ease, transform $animationDuration ease;
 }
 
 $animation: 'zoomInLeft';
@@ -333,10 +313,10 @@ $animation: 'zoomInLeft';
   transform: scale3d(.1, .1, .1) translate3d(-400px, 0, 0);
 }
 
-.#{$animatedClass} > .#{$animation} {
+.#{$animateInClass} > .#{$animation} {
   opacity: 1;
   transform: none;
-  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+  transition: opacity $animationDuration ease, transform $animationDuration ease;
 }
 
 $animation: 'zoomInRight';
@@ -346,10 +326,10 @@ $animation: 'zoomInRight';
   transform: scale3d(.1, .1, .1) translate3d(400px, 0, 0);
 }
 
-.#{$animatedClass} > .#{$animation} {
+.#{$animateInClass} > .#{$animation} {
   opacity: 1;
   transform: none;
-  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+  transition: opacity $animationDuration ease, transform $animationDuration ease;
 }
 
 $animation: 'zoomInUp';
@@ -359,10 +339,10 @@ $animation: 'zoomInUp';
   transform: scale3d(.1, .1, .1) translate3d(0, 400px, 0);
 }
 
-.#{$animatedClass} > .#{$animation} {
+.#{$animateInClass} > .#{$animation} {
   opacity: 1;
   transform: none;
-  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+  transition: opacity $animationDuration ease, transform $animationDuration ease;
 }
 
 $animation: 'slideInDown';
@@ -372,9 +352,9 @@ $animation: 'slideInDown';
   visibility: visible;
 }
 
-.#{$animatedClass} > .#{$animation} {
+.#{$animateInClass} > .#{$animation} {
   transform: translate3d(0, 0, 0);
-  transition: transform $animationSpeed ease;
+  transition: transform $animationDuration ease;
 }
 
 $animation: 'slideInLeft';
@@ -384,9 +364,9 @@ $animation: 'slideInLeft';
   visibility: visible;
 }
 
-.#{$animatedClass} > .#{$animation} {
+.#{$animateInClass} > .#{$animation} {
   transform: translate3d(0, 0, 0);
-  transition: transform $animationSpeed ease;
+  transition: transform $animationDuration ease;
 }
 
 $animation: 'slideInRight';
@@ -396,9 +376,9 @@ $animation: 'slideInRight';
   visibility: visible;
 }
 
-.#{$animatedClass} > .#{$animation} {
+.#{$animateInClass} > .#{$animation} {
   transform: translate3d(0, 0, 0);
-  transition: transform $animationSpeed ease;
+  transition: transform $animationDuration ease;
 }
 
 $animation: 'slideInUp';
@@ -408,7 +388,7 @@ $animation: 'slideInUp';
   visibility: visible;
 }
 
-.#{$animatedClass} > .#{$animation} {
+.#{$animateInClass} > .#{$animation} {
   transform: translate3d(0, 0, 0);
-  transition: transform $animationSpeed ease;
+  transition: transform $animationDuration ease;
 }

@@ -4,7 +4,7 @@ $animation: 'fadeIn';
   opacity: 0;
 }
 
-.#{$animatedClass} > .#{$animation} {
+.#{$animateInClass} > .#{$animation} {
   opacity: 1;
-  transition: opacity $animationSpeed ease;
+  transition: opacity $animationDuration ease;
 }

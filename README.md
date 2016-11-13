@@ -62,14 +62,14 @@ $ npm install footwork-animate --save
   * `slideInRight`
   * `slideInUp`
 
-1. Finally, add the class `animatedIn` to the parent element of the elements you want to animate into view.
+1. Finally, add the class `animateIn` to the parent element of the elements you want to animate into view.
 
   Full example:
 
   ```html
   <div class="contents">
     <!-- Any element with one of the above animations is invisible until
-        its parent has the animatedIn class added. -->
+        its parent has the animateIn class added. -->
     <h1 class="fadeInUp">Example fadeInUp</h1>
     <h1 class="flipInX">Example flipInX</h1>
   </div>
@@ -78,12 +78,12 @@ $ npm install footwork-animate --save
   ```javascript
   /**
   * All of the direct children of the parent will then have their
-  * animations triggered when the animatedIn class is added to the parent.
+  * animations triggered when the animateIn class is added to the parent.
   */
-  $('.contents').addClass('animatedIn');
+  $('.contents').addClass('animateIn');
 
-  // removing the animatedIn class will cause the element to reset to original starting, invisible state
-  $('.contents').removeClass('animatedIn');
+  // removing the animateIn class will cause the element to reset to original starting, invisible state
+  $('.contents').removeClass('animateIn');
   ```
 
 ## Custom Builds
@@ -134,10 +134,10 @@ If you are making your own custom build using the SCSS, you have these available
 
 ```SASS
 // The class added to the parent which triggers the animation on its children
-$animatedClass: 'animatedIn';
+$animateInClass: 'animateIn';
 
-// The speed of the animations
-$animationSpeed: 0.6s;
+// The duration of the animations
+$animationDuration: 0.6s;
 
 // For animations that 'slide' elements, this is the 'normal' distance
 $normalDistance: 100px;

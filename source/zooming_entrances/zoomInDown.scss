@@ -5,8 +5,8 @@ $animation: 'zoomInDown';
   transform: scale3d(.1, .1, .1) translate3d(0, -400px, 0);
 }
 
-.#{$animatedClass} > .#{$animation} {
+.#{$animateInClass} > .#{$animation} {
   opacity: 1;
   transform: none;
-  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+  transition: opacity $animationDuration ease, transform $animationDuration ease;
 }

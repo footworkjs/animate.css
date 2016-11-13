@@ -5,8 +5,8 @@ $animation: 'fadeInDownBig';
   transform: translate3d(0, -$bigDistance, 0);
 }
 
-.#{$animatedClass} > .#{$animation} {
+.#{$animateInClass} > .#{$animation} {
   opacity: 1;
   transform: none;
-  transition: opacity $animationSpeed ease, transform $animationSpeed ease;
+  transition: opacity $animationDuration ease, transform $animationDuration ease;
 }
