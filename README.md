@@ -4,9 +4,10 @@
 
 *Just-add-water CSS animation (for FootworkJS)*
 
-Custom/forked version of [animate.css](https://github.com/daneden/animate.css) for usage with [FootworkJS](https://github.com/footworkjs/footwork) when animating its elements.
+This is a CSS library/toolset used to animate elements into and out of view. Elements are animated into and out of the browser by using a parent flag which triggers a CSS animation on its nested children.
 
-**NOTE:** This version of [animate.css](https://github.com/daneden/animate.css) has been modified to be [SASS](http://sass-lang.com/)-based and to use a flag on the parent element to trigger the changed state/animation on its direct children.
+* **NOTE**: This library can be used independently, but was developed for usage with [FootworkJS](https://github.com/footworkjs/footwork) when animating its elements.
+* **NOTE**: Based on/heavily customized version of [animate.css](https://github.com/daneden/animate.css).
 
 ## Installation
 
