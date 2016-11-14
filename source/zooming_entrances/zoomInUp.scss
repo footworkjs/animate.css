@@ -8,5 +8,5 @@ $animation: 'zoomInUp';
 .#{$animateInClass} > .#{$animation} {
   opacity: 1;
   transform: none;
-  transition: opacity $animationInDuration ease, transform $animationInDuration ease;
+  transition: opacity $animateInDuration ease, transform $animateInDuration ease;
 }

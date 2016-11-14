@@ -8,6 +8,6 @@ $animation: 'flipInY';
 
 .#{$animateInClass} > .#{$animation} {
   transform: perspective(400px);
-  transition: opacity $animationInDuration ease, transform $animationInDuration ease;
+  transition: opacity $animateInDuration ease, transform $animateInDuration ease;
   opacity: 1;
 }
