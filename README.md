@@ -148,19 +148,5 @@ $bigDistance: 200px;
 @import "/path/to/footwork-animate/animate.scss";
 ```
 
-## Custom FootworkJS Builds
-
-If you are making a custom build for use with [FootworkJS](https://github.com/footworkjs/footwork) then you will need to specify a different `animateInClass`:
-
-```SASS
-/**
- * Footwork uses this class to signify an element as resolved and
- * is ready to be shown, so we need to use it as the animateIn hook
- */
-$animateInClass: 'fw-entity-resolved';
-
-@import "/path/to/footwork-animate/animate.scss";
-```
-
 ## License
 footwork-animate is licensed under the MIT license. (http://opensource.org/licenses/MIT)
