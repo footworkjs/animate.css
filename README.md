@@ -6,7 +6,7 @@
 
 This is a CSS library/toolset used to animate elements into and out of view. Elements are animated into and out of the browser by using a parent flag which triggers a CSS animation on its nested children.
 
-* **NOTE**: This library can be used independently, but was developed for usage with [FootworkJS](https://github.com/footworkjs/footwork) when animating its elements.
+* **NOTE**: This library can be used independently of, but was developed for use with [FootworkJS](https://github.com/footworkjs/footwork) when animating its elements.
 * **NOTE**: Based on/heavily customized version of [animate.css](https://github.com/daneden/animate.css).
 
 ## Installation
@@ -155,7 +155,7 @@ If you are making a custom build for use with [FootworkJS](https://github.com/fo
 ```SASS
 /**
  * Footwork uses this class to signify an element as resolved and
- * is ready to be shown, so we need to use it as the animatIn hook
+ * is ready to be shown, so we need to use it as the animateIn hook
  */
 $animateInClass: 'fw-entity-resolved';
 
