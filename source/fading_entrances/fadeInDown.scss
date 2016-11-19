@@ -2,7 +2,7 @@ $animation: 'fadeInDown';
 
 .#{$animation} {
   opacity: 0;
-  transform: translate3d(0, $normalDistance, 0);
+  transform: translate3d(0, -$normalDistance, 0);
 }
 
 .#{$animateInClass} > .#{$animation} {

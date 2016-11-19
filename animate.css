@@ -2,7 +2,7 @@
 
 /*!
  * footwork-animate -http://footworkjs.com
- * Version - 3.5.9
+ * Version - 3.5.13
  * Licensed under the MIT license - http://opensource.org/licenses/MIT
  *
  * Copyright (c) 2016 Daniel Eden
@@ -17,7 +17,7 @@
 
 .fadeInDown {
   opacity: 0;
-  transform: translate3d(0, 100px, 0); }
+  transform: translate3d(0, -100px, 0); }
 
 .animateIn > .fadeInDown {
   opacity: 1;
